@@ -54,7 +54,7 @@ const ManageFilter = ({
       <div>
         <Select onValueChange={(value) => handleFilter(value)}>
           <SelectTrigger className="w-[180px]">
-            <SelectValue placeholder="Theme" />
+            <SelectValue placeholder="Filter by Type" />
           </SelectTrigger>
           <SelectContent>
             <SelectItem value="grass">grass</SelectItem>

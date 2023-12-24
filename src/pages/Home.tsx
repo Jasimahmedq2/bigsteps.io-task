@@ -45,8 +45,9 @@ const Home = () => {
         setDetails={setDetails}
       />
       {loading ? (
-        <div className="flex items-center space-x-4">
-          <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="">
+          <div className="pt-6 pb-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <Skeleton className="h-24 sm:h-48 w-[400px]" />
             <Skeleton className="h-24 sm:h-48 w-[400px]" />
             <Skeleton className="h-24 sm:h-48 w-[400px]" />
             <Skeleton className="h-24 sm:h-48 w-[400px]" />
@@ -58,7 +59,7 @@ const Home = () => {
           </div>
         </div>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+        <div className="pt-6 pb-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 pl-2 lr-2 sm:pl-4 sm:pr-4">
           {searchData.length > 0
             ? searchData?.map((item) => <PokemonCard item={item} />)
             : details?.map((item) => <PokemonCard item={item} />)}
